@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>台股強勢股盤後觀測站</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#0f1c24",
+            mist: "#e8f1f4",
+            tide: "#0d7377",
+            tideDark: "#095456",
+            amberUp: "#c45c26",
+            slateLine: "#d5e2e7",
+          },
+          fontFamily: {
+            display: ['"Noto Sans TC"', "PingFang TC", "Microsoft JhengHei", "sans-serif"],
+            mono: ['"IBM Plex Mono"', "ui-monospace", "monospace"],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Noto+Sans+TC:wght@400;500;700;900&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      background:
+        radial-gradient(ellipse 80% 50% at 10% -10%, rgba(13, 115, 119, 0.18), transparent 55%),
+        radial-gradient(ellipse 60% 40% at 100% 0%, rgba(196, 92, 38, 0.10), transparent 50%),
+        linear-gradient(180deg, #f4fafb 0%, #eef5f7 40%, #e8f0f2 100%);
+      min-height: 100vh;
+    }
+    .card-enter {
+      animation: rise 0.45s ease both;
+    }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="font-display text-ink antialiased">
+  <header class="border-b border-slateLine/80 bg-white/70 backdrop-blur-md sticky top-0 z-20">
+    <div class="max-w-6xl mx-auto px-4 py-4 sm:py-5 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2">
+      <div>
+        <p class="text-tide text-xs font-medium tracking-[0.2em] uppercase">After-Hours Screener</p>
+        <h1 class="text-2xl sm:text-3xl font-black tracking-tight mt-1">台股強勢股盤後觀測站</h1>
+        <p class="text-sm text-ink/60 mt-1">鎖定 15–100 元｜漲幅 ≥ 7%｜量價與法人買超篩選</p>
+      </div>
+      <div class="text-sm text-ink/70">
+        <span class="text-ink/45">資料更新</span>
+        <time id="last-updated" class="font-mono ml-1 text-tideDark">載入中…</time>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-6 sm:py-8">
+    <section class="mb-5 flex flex-wrap items-center gap-3 text-xs sm:text-sm text-ink/55">
+      <span class="inline-flex items-center gap-1.5 rounded-full bg-white/80 border border-slateLine px-3 py-1">
+        <span class="w-1.5 h-1.5 rounded-full bg-tide"></span>
+        本金控管：百元以下標的
+      </span>
+      <span class="inline-flex items-center gap-1.5 rounded-full bg-white/80 border border-slateLine px-3 py-1">
+        一張資金 = 收盤價 × 1,000
+      </span>
+      <span id="result-count" class="inline-flex items-center gap-1.5 rounded-full bg-tide/10 text-tideDark border border-tide/20 px-3 py-1 font-medium">
+        —
+      </span>
+    </section>
+
+    <div id="loading" class="text-center py-16 text-ink/50">
+      <div class="inline-block w-8 h-8 border-2 border-tide/30 border-t-tide rounded-full animate-spin mb-3"></div>
+      <p>正在讀取盤後資料…</p>
+    </div>
+
+    <div id="empty-state" class="hidden">
+      <div class="rounded-2xl border border-dashed border-slateLine bg-white/60 px-6 py-16 text-center">
+        <p class="text-lg font-bold text-ink/80">今日無符合條件之強勢股</p>
+        <p class="text-sm text-ink/50 mt-2">可於下一交易日 15:30 後再回來查看</p>
+      </div>
+    </div>
+
+    <div id="error-state" class="hidden">
+      <div class="rounded-2xl border border-amberUp/30 bg-amberUp/5 px-6 py-10 text-center">
+        <p class="font-bold text-amberUp">資料載入失敗</p>
+        <p id="error-message" class="text-sm text-ink/60 mt-2"></p>
+      </div>
+    </div>
+
+    <!-- 手機：卡片 -->
+    <div id="card-list" class="md:hidden space-y-3"></div>
+
+    <!-- 桌面：表格 -->
+    <div id="table-wrap" class="hidden md:block overflow-x-auto rounded-2xl border border-slateLine bg-white/80 shadow-sm">
+      <table class="w-full text-sm text-left">
+        <thead class="bg-ink text-mist text-xs uppercase tracking-wider">
+          <tr>
+            <th class="px-4 py-3 font-medium">代號</th>
+            <th class="px-4 py-3 font-medium">名稱</th>
+            <th class="px-4 py-3 font-medium text-right">收盤價</th>
+            <th class="px-4 py-3 font-medium text-right">漲幅</th>
+            <th class="px-4 py-3 font-medium text-right">外資買超(張)</th>
+            <th class="px-4 py-3 font-medium text-right">投信買超(張)</th>
+            <th class="px-4 py-3 font-medium text-right">買一張資金</th>
+          </tr>
+        </thead>
+        <tbody id="table-body" class="divide-y divide-slateLine"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer class="max-w-6xl mx-auto px-4 pb-10 pt-2 text-center text-xs text-ink/40">
+    資料來源：臺灣證券交易所／yfinance｜僅供個人盤後觀測，不構成投資建議
+  </footer>
+
+  <script>
+    const fmtNumber = (n, digits = 0) => {
+      if (n === null || n === undefined || Number.isNaN(Number(n))) return "—";
+      return Number(n).toLocaleString("zh-TW", {
+        minimumFractionDigits: digits,
+        maximumFractionDigits: digits,
+      });
+    };
+
+    const fmtPct = (n) => {
+      const v = Number(n);
+      if (Number.isNaN(v)) return "—";
+      const sign = v > 0 ? "+" : "";
+      return `${sign}${v.toFixed(2)}%`;
+    };
+
+    function renderCards(stocks) {
+      const list = document.getElementById("card-list");
+      list.innerHTML = stocks
+        .map(
+          (s, i) => `
+        <article class="card-enter rounded-2xl border border-slateLine bg-white/90 p-4 shadow-sm"
+                 style="animation-delay:${i * 40}ms">
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <div class="flex items-baseline gap-2">
+                <span class="font-mono text-lg font-semibold text-tideDark">${s.code}</span>
+                <span class="text-base font-bold">${s.name}</span>
+              </div>
+              <p class="text-xs text-ink/45 mt-1">買一張約需 <span class="font-mono text-ink/70">$${fmtNumber(s.lot_cost)}</span></p>
+            </div>
+            <div class="text-right shrink-0">
+              <p class="font-mono text-xl font-semibold">${fmtNumber(s.close, 2)}</p>
+              <p class="text-amberUp font-mono font-semibold text-sm mt-0.5">${fmtPct(s.change_pct)}</p>
+            </div>
+          </div>
+          <div class="mt-4 grid grid-cols-2 gap-2 text-sm">
+            <div class="rounded-xl bg-mist/80 px-3 py-2">
+              <p class="text-[11px] text-ink/45">外資買超</p>
+              <p class="font-mono font-semibold text-tideDark mt-0.5">${fmtNumber(s.foreign_net)} <span class="text-xs font-normal text-ink/40">張</span></p>
+            </div>
+            <div class="rounded-xl bg-mist/80 px-3 py-2">
+              <p class="text-[11px] text-ink/45">投信買超</p>
+              <p class="font-mono font-semibold text-tideDark mt-0.5">${fmtNumber(s.trust_net)} <span class="text-xs font-normal text-ink/40">張</span></p>
+            </div>
+          </div>
+        </article>`
+        )
+        .join("");
+    }
+
+    function renderTable(stocks) {
+      const body = document.getElementById("table-body");
+      body.innerHTML = stocks
+        .map(
+          (s) => `
+        <tr class="hover:bg-mist/50 transition-colors">
+          <td class="px-4 py-3 font-mono font-semibold text-tideDark">${s.code}</td>
+          <td class="px-4 py-3 font-medium">${s.name}</td>
+          <td class="px-4 py-3 text-right font-mono">${fmtNumber(s.close, 2)}</td>
+          <td class="px-4 py-3 text-right font-mono font-semibold text-amberUp">${fmtPct(s.change_pct)}</td>
+          <td class="px-4 py-3 text-right font-mono">${fmtNumber(s.foreign_net)}</td>
+          <td class="px-4 py-3 text-right font-mono">${fmtNumber(s.trust_net)}</td>
+          <td class="px-4 py-3 text-right font-mono">$${fmtNumber(s.lot_cost)}</td>
+        </tr>`
+        )
+        .join("");
+    }
+
+    function showEmpty() {
+      document.getElementById("empty-state").classList.remove("hidden");
+      document.getElementById("card-list").innerHTML = "";
+      document.getElementById("table-wrap").classList.add("hidden");
+      document.getElementById("result-count").textContent = "0 檔符合";
+    }
+
+    function showResults(stocks) {
+      document.getElementById("empty-state").classList.add("hidden");
+      document.getElementById("table-wrap").classList.remove("hidden");
+      document.getElementById("result-count").textContent = `${stocks.length} 檔符合`;
+      renderCards(stocks);
+      renderTable(stocks);
+    }
+
+    async function loadData() {
+      const loading = document.getElementById("loading");
+      const errorState = document.getElementById("error-state");
+      try {
+        const resp = await fetch(`data.json?t=${Date.now()}`, { cache: "no-store" });
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        const data = await resp.json();
+        const updated = data.last_updated || "尚無更新紀錄";
+        document.getElementById("last-updated").textContent = updated;
+
+        const stocks = Array.isArray(data.stocks) ? data.stocks : [];
+        if (stocks.length === 0) {
+          showEmpty();
+        } else {
+          showResults(stocks);
+        }
+      } catch (err) {
+        errorState.classList.remove("hidden");
+        document.getElementById("error-message").textContent =
+          err?.message || "無法讀取 data.json，請確認檔案是否存在。";
+        document.getElementById("last-updated").textContent = "讀取失敗";
+      } finally {
+        loading.classList.add("hidden");
+      }
+    }
+
+    loadData();
+  </script>
+</body>
+</html>
