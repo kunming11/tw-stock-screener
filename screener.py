@@ -235,11 +235,13 @@ def fetch_institutional_map(date_str: str) -> dict[str, dict[str, float]]:
     return result
 
 
-def pass_technical_filter(code: str) -> bool:
+def evaluate_technical_filter(code: str) -> dict[str, Any] | None:
     """
     yfinance 技術條件：
     - 今日收盤 > 20MA
     - 今日成交量 >= 前一交易日的 5 日均量 * 2
+
+    通過時回傳量能／均線指標；未通過或失敗回傳 None。
     """
     ticker = f"{code}.TW"
     try:
@@ -253,7 +255,7 @@ def pass_technical_filter(code: str) -> bool:
         )
         if hist is None or hist.empty:
             print(f"[WARN] {ticker} 無歷史資料")
-            return False
+            return None
 
         # yfinance 多 ticker 時可能是 MultiIndex columns
         if isinstance(hist.columns, pd.MultiIndex):
@@ -262,7 +264,7 @@ def pass_technical_filter(code: str) -> bool:
         hist = hist.dropna(subset=["Close", "Volume"])
         if len(hist) < 21:
             print(f"[WARN] {ticker} 歷史資料不足 ({len(hist)} 天)")
-            return False
+            return None
 
         close = float(hist["Close"].iloc[-1])
         volume = float(hist["Volume"].iloc[-1])
@@ -272,19 +274,28 @@ def pass_technical_filter(code: str) -> bool:
         vol_ma5_prev = float(hist["Volume"].iloc[-6:-1].mean())
 
         if pd.isna(ma20) or pd.isna(vol_ma5_prev) or vol_ma5_prev <= 0:
-            return False
+            return None
 
         cond_ma = close > ma20
         cond_vol = volume >= vol_ma5_prev * 2
-        ok = cond_ma and cond_vol
+        volume_ratio = volume / vol_ma5_prev
         print(
             f"[DEBUG] {ticker} close={close:.2f} ma20={ma20:.2f} "
-            f"vol={volume:.0f} vol5prev={vol_ma5_prev:.0f} -> {ok}"
+            f"vol={volume:.0f} vol5prev={vol_ma5_prev:.0f} "
+            f"ratio={volume_ratio:.2f}x -> {cond_ma and cond_vol}"
         )
-        return ok
+        if not (cond_ma and cond_vol):
+            return None
+
+        return {
+            "ma20": round(ma20, 2),
+            "volume": int(round(volume / 1000.0)),  # 張
+            "volume_ma5": int(round(vol_ma5_prev / 1000.0)),  # 張
+            "volume_ratio": round(volume_ratio, 2),
+        }
     except Exception as exc:
         print(f"[WARN] {ticker} 技術篩選失敗: {exc}")
-        return False
+        return None
 
 
 def load_mi_index_with_fallback() -> tuple[list[dict[str, Any]], str]:
@@ -376,8 +387,9 @@ def main() -> None:
                     print(f"[SKIP] {code} 法人未買超 (外資={foreign_net}, 投信={trust_net})")
                     continue
 
-                # 技術面
-                if not pass_technical_filter(code):
+                # 技術面（含量能數據）
+                tech = evaluate_technical_filter(code)
+                if not tech:
                     print(f"[SKIP] {code} 未通過技術條件")
                     continue
 
@@ -388,6 +400,10 @@ def main() -> None:
                         "name": stock["name"],
                         "close": stock["close"],
                         "change_pct": stock["change_pct"],
+                        "ma20": tech["ma20"],
+                        "volume": tech["volume"],
+                        "volume_ma5": tech["volume_ma5"],
+                        "volume_ratio": tech["volume_ratio"],
                         "foreign_net": int(foreign_net),
                         "trust_net": int(trust_net),
                         "lot_cost": lot_cost,

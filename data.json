@@ -1,11 +1,15 @@
 {
-  "last_updated": "2026-08-05 16:43:26",
+  "last_updated": "2026-08-05 20:31:39",
   "stocks": [
     {
       "code": "2465",
       "name": "麗臺",
       "close": 85.8,
       "change_pct": 10.0,
+      "ma20": 79.73,
+      "volume": 2999,
+      "volume_ma5": 994,
+      "volume_ratio": 3.02,
       "foreign_net": 1077,
       "trust_net": 0,
       "lot_cost": 85800
@@ -15,6 +19,10 @@
       "name": "偉訓",
       "close": 87.1,
       "change_pct": 9.97,
+      "ma20": 79.08,
+      "volume": 2464,
+      "volume_ma5": 570,
+      "volume_ratio": 4.33,
       "foreign_net": 685,
       "trust_net": 0,
       "lot_cost": 87100
@@ -24,6 +32,10 @@
       "name": "友通",
       "close": 62.1,
       "change_pct": 8.38,
+      "ma20": 57.24,
+      "volume": 2190,
+      "volume_ma5": 531,
+      "volume_ratio": 4.13,
       "foreign_net": 722,
       "trust_net": 0,
       "lot_cost": 62100
@@ -33,6 +45,10 @@
       "name": "永崴投控",
       "close": 20.3,
       "change_pct": 8.27,
+      "ma20": 17.52,
+      "volume": 1496,
+      "volume_ma5": 706,
+      "volume_ratio": 2.12,
       "foreign_net": 514,
       "trust_net": 0,
       "lot_cost": 20300
@@ -42,6 +58,10 @@
       "name": "威強電",
       "close": 97.6,
       "change_pct": 7.37,
+      "ma20": 88.18,
+      "volume": 7177,
+      "volume_ma5": 2567,
+      "volume_ratio": 2.8,
       "foreign_net": 310,
       "trust_net": -3,
       "lot_cost": 97600
@@ -51,6 +71,10 @@
       "name": "全球傳動",
       "close": 53.6,
       "change_pct": 7.2,
+      "ma20": 51.88,
+      "volume": 3654,
+      "volume_ma5": 1556,
+      "volume_ratio": 2.35,
       "foreign_net": 98,
       "trust_net": 0,
       "lot_cost": 53600
