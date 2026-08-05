@@ -120,6 +120,9 @@
             <th class="px-4 py-3 font-medium">名稱</th>
             <th class="px-4 py-3 font-medium text-right">收盤價</th>
             <th class="px-4 py-3 font-medium text-right">漲幅</th>
+            <th class="px-4 py-3 font-medium text-right">今日量(張)</th>
+            <th class="px-4 py-3 font-medium text-right">5日均量(張)</th>
+            <th class="px-4 py-3 font-medium text-right">量比</th>
             <th class="px-4 py-3 font-medium text-right">外資買超(張)</th>
             <th class="px-4 py-3 font-medium text-right">投信買超(張)</th>
             <th class="px-4 py-3 font-medium text-right">買一張資金</th>
@@ -154,6 +157,12 @@
       return `${sign}${v.toFixed(2)}%`;
     };
 
+    const fmtRatio = (n) => {
+      const v = Number(n);
+      if (Number.isNaN(v)) return "—";
+      return `${v.toFixed(2)}x`;
+    };
+
     function setCopyButtonEnabled(enabled) {
       const btn = document.getElementById("copy-prompt-btn");
       btn.disabled = !enabled;
@@ -163,7 +172,7 @@
       const stockLines = stocks
         .map(
           (s, i) =>
-            `${i + 1}. ${s.code} ${s.name}｜收盤 ${fmtNumber(s.close, 2)} 元｜漲幅 ${fmtPct(s.change_pct)}｜外資買超 ${fmtNumber(s.foreign_net)} 張｜投信買超 ${fmtNumber(s.trust_net)} 張｜買一張約需 ${fmtNumber(s.lot_cost)} 元`
+            `${i + 1}. ${s.code} ${s.name}｜收盤 ${fmtNumber(s.close, 2)} 元｜漲幅 ${fmtPct(s.change_pct)}｜20MA ${fmtNumber(s.ma20, 2)}｜今日量 ${fmtNumber(s.volume)} 張｜5日均量 ${fmtNumber(s.volume_ma5)} 張｜量比 ${fmtRatio(s.volume_ratio)}｜外資買超 ${fmtNumber(s.foreign_net)} 張｜投信買超 ${fmtNumber(s.trust_net)} 張｜買一張約需 ${fmtNumber(s.lot_cost)} 元`
         )
         .join("\n");
 
@@ -269,6 +278,26 @@ ${stockLines}
               <p class="text-[11px] text-ink/45">投信買超</p>
               <p class="font-mono font-semibold text-tideDark mt-0.5">${fmtNumber(s.trust_net)} <span class="text-xs font-normal text-ink/40">張</span></p>
             </div>
+            <div class="rounded-xl bg-mist/80 px-3 py-2">
+              <p class="text-[11px] text-ink/45">今日成交量</p>
+              <p class="font-mono font-semibold text-tideDark mt-0.5">${fmtNumber(s.volume)} <span class="text-xs font-normal text-ink/40">張</span></p>
+            </div>
+            <div class="rounded-xl bg-mist/80 px-3 py-2">
+              <p class="text-[11px] text-ink/45">5日均量</p>
+              <p class="font-mono font-semibold text-tideDark mt-0.5">${fmtNumber(s.volume_ma5)} <span class="text-xs font-normal text-ink/40">張</span></p>
+            </div>
+            <div class="rounded-xl bg-tide/10 border border-tide/15 px-3 py-2 col-span-2">
+              <div class="flex items-center justify-between gap-2">
+                <div>
+                  <p class="text-[11px] text-ink/45">量能確認（量比）</p>
+                  <p class="font-mono font-semibold text-tideDark mt-0.5">${fmtRatio(s.volume_ratio)} <span class="text-xs font-normal text-ink/45">今日量 ÷ 5日均量（門檻 ≥ 2.00x）</span></p>
+                </div>
+                <div class="text-right shrink-0">
+                  <p class="text-[11px] text-ink/45">20MA</p>
+                  <p class="font-mono font-semibold text-tideDark mt-0.5">${fmtNumber(s.ma20, 2)}</p>
+                </div>
+              </div>
+            </div>
           </div>
         </article>`
         )
@@ -285,6 +314,9 @@ ${stockLines}
           <td class="px-4 py-3 font-medium">${s.name}</td>
           <td class="px-4 py-3 text-right font-mono">${fmtNumber(s.close, 2)}</td>
           <td class="px-4 py-3 text-right font-mono font-semibold text-amberUp">${fmtPct(s.change_pct)}</td>
+          <td class="px-4 py-3 text-right font-mono">${fmtNumber(s.volume)}</td>
+          <td class="px-4 py-3 text-right font-mono">${fmtNumber(s.volume_ma5)}</td>
+          <td class="px-4 py-3 text-right font-mono font-semibold text-tideDark">${fmtRatio(s.volume_ratio)}</td>
           <td class="px-4 py-3 text-right font-mono">${fmtNumber(s.foreign_net)}</td>
           <td class="px-4 py-3 text-right font-mono">${fmtNumber(s.trust_net)}</td>
           <td class="px-4 py-3 text-right font-mono">$${fmtNumber(s.lot_cost)}</td>
