@@ -67,7 +67,7 @@
     <section class="mb-5 flex flex-wrap items-center gap-3 text-xs sm:text-sm text-ink/55">
       <span class="inline-flex items-center gap-1.5 rounded-full bg-white/80 border border-slateLine px-3 py-1">
         <span class="w-1.5 h-1.5 rounded-full bg-tide"></span>
-        本金控管：百元以下標的
+        本金控管：15 萬／百元以下標的
       </span>
       <span class="inline-flex items-center gap-1.5 rounded-full bg-white/80 border border-slateLine px-3 py-1">
         一張資金 = 收盤價 × 1,000
@@ -75,6 +75,18 @@
       <span id="result-count" class="inline-flex items-center gap-1.5 rounded-full bg-tide/10 text-tideDark border border-tide/20 px-3 py-1 font-medium">
         —
       </span>
+      <button
+        id="copy-prompt-btn"
+        type="button"
+        disabled
+        class="ml-auto inline-flex items-center gap-2 rounded-full bg-tide text-white px-4 py-2 text-xs sm:text-sm font-semibold shadow-sm transition enabled:hover:bg-tideDark enabled:active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4" aria-hidden="true">
+          <path d="M7 3.5A1.5 1.5 0 0 1 8.5 2h6A1.5 1.5 0 0 1 16 3.5v10a1.5 1.5 0 0 1-1.5 1.5h-6A1.5 1.5 0 0 1 7 13.5v-10Z" />
+          <path d="M4.5 6A1.5 1.5 0 0 0 3 7.5v9A1.5 1.5 0 0 0 4.5 18h6a1.5 1.5 0 0 0 1.5-1.5V16H8.5A3 3 0 0 1 5.5 13V6h-1Z" />
+        </svg>
+        <span id="copy-prompt-label">複製 Gemini 分析 Prompt</span>
+      </button>
     </section>
 
     <div id="loading" class="text-center py-16 text-ink/50">
@@ -123,6 +135,10 @@
   </footer>
 
   <script>
+    const CAPITAL = 150000;
+    let latestUpdated = "";
+    let latestStocks = [];
+
     const fmtNumber = (n, digits = 0) => {
       if (n === null || n === undefined || Number.isNaN(Number(n))) return "—";
       return Number(n).toLocaleString("zh-TW", {
@@ -137,6 +153,92 @@
       const sign = v > 0 ? "+" : "";
       return `${sign}${v.toFixed(2)}%`;
     };
+
+    function setCopyButtonEnabled(enabled) {
+      const btn = document.getElementById("copy-prompt-btn");
+      btn.disabled = !enabled;
+    }
+
+    function buildGeminiPrompt(stocks, lastUpdated) {
+      const stockLines = stocks
+        .map(
+          (s, i) =>
+            `${i + 1}. ${s.code} ${s.name}｜收盤 ${fmtNumber(s.close, 2)} 元｜漲幅 ${fmtPct(s.change_pct)}｜外資買超 ${fmtNumber(s.foreign_net)} 張｜投信買超 ${fmtNumber(s.trust_net)} 張｜買一張約需 ${fmtNumber(s.lot_cost)} 元`
+        )
+        .join("\n");
+
+      return `你是一位嚴謹的台股短線交易顧問。請依下列條件，對我的盤後候選清單做投資分析，並給出可執行的建議。
+
+【我的資金與風險條件】
+- 總本金：新台幣 ${fmtNumber(CAPITAL)} 元
+- 標的偏好：股價約 15～100 元
+- 交易風格：隔日短線／波段觀察，重視資金控管與風險控管
+- 單筆風險原則：單檔最大虧損建議控制在總本金的 1%～2% 以內
+- 部位原則：不要建議把全部資金押在單一標的；需考慮可同時持有檔數與剩餘現金
+
+【今日篩選條件（已通過）】
+1. 收盤價 15～100 元，且當日漲幅 ≥ 7%
+2. 收盤價站上 20 日均線（20MA）
+3. 今日成交量 ≥ 前一交易日 5 日均量 × 2
+4. 外資買超 > 0 或 投信買超 > 0
+
+【資料時間】
+${lastUpdated || "未知"}
+
+【候選股票清單】
+${stockLines}
+
+【請依序輸出】
+1. 先總評今日名單風險與機會（短線氣氛、追高風險、資金配置總原則）
+2. 針對每一檔給出：
+   - 是否值得隔日關注／建議優先順序（高／中／低，或直接略過）
+   - 建議進場區間（價格）
+   - 建議買進張數或金額（必須符合我的 ${fmtNumber(CAPITAL)} 本金）
+   - 合理停利點（價格與約略報酬％）
+   - 合理停損點（價格與約略虧損％、對應本金風險金額）
+   - 簡短理由（量價、法人、風險）
+3. 最後給一份「若只能選 1～2 檔」的組合建議，並說明總投入金額、預估最大虧損、保留現金比例
+4. 用繁體中文回答，條列清楚，數字具體，避免空泛用語
+5. 結尾務必提醒：此為盤後分析輔助，不構成投資建議，實際交易請自行判斷`;
+    }
+
+    async function copyText(text) {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(text);
+        return;
+      }
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.setAttribute("readonly", "");
+      ta.style.position = "fixed";
+      ta.style.left = "-9999px";
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      document.body.removeChild(ta);
+    }
+
+    async function handleCopyPrompt() {
+      if (!latestStocks.length) return;
+      const btn = document.getElementById("copy-prompt-btn");
+      const label = document.getElementById("copy-prompt-label");
+      const original = "複製 Gemini 分析 Prompt";
+      try {
+        const prompt = buildGeminiPrompt(latestStocks, latestUpdated);
+        await copyText(prompt);
+        label.textContent = "已複製！可貼到 Gemini";
+        btn.classList.add("bg-tideDark");
+        setTimeout(() => {
+          label.textContent = original;
+          btn.classList.remove("bg-tideDark");
+        }, 2000);
+      } catch (err) {
+        label.textContent = "複製失敗，請重試";
+        setTimeout(() => {
+          label.textContent = original;
+        }, 2000);
+      }
+    }
 
     function renderCards(stocks) {
       const list = document.getElementById("card-list");
@@ -196,12 +298,16 @@
       document.getElementById("card-list").innerHTML = "";
       document.getElementById("table-wrap").classList.add("hidden");
       document.getElementById("result-count").textContent = "0 檔符合";
+      latestStocks = [];
+      setCopyButtonEnabled(false);
     }
 
     function showResults(stocks) {
       document.getElementById("empty-state").classList.add("hidden");
       document.getElementById("table-wrap").classList.remove("hidden");
       document.getElementById("result-count").textContent = `${stocks.length} 檔符合`;
+      latestStocks = stocks;
+      setCopyButtonEnabled(true);
       renderCards(stocks);
       renderTable(stocks);
     }
@@ -214,6 +320,7 @@
         if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
         const data = await resp.json();
         const updated = data.last_updated || "尚無更新紀錄";
+        latestUpdated = updated;
         document.getElementById("last-updated").textContent = updated;
 
         const stocks = Array.isArray(data.stocks) ? data.stocks : [];
@@ -227,11 +334,13 @@
         document.getElementById("error-message").textContent =
           err?.message || "無法讀取 data.json，請確認檔案是否存在。";
         document.getElementById("last-updated").textContent = "讀取失敗";
+        setCopyButtonEnabled(false);
       } finally {
         loading.classList.add("hidden");
       }
     }
 
+    document.getElementById("copy-prompt-btn").addEventListener("click", handleCopyPrompt);
     loadData();
   </script>
 </body>
