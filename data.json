@@ -1,31 +1,70 @@
 {
-  "last_updated": "2026-08-17 16:07:00",
+  "last_updated": "2026-08-18 16:01:38",
   "stocks": [
     {
-      "code": "2615",
-      "name": "萬海",
-      "close": 99.6,
-      "change_pct": 9.93,
-      "ma20": 86.48,
-      "volume": 49718,
-      "volume_ma5": 15660,
-      "volume_ratio": 3.17,
-      "foreign_net": 14819,
-      "trust_net": -29,
-      "lot_cost": 99600
+      "code": "5608",
+      "name": "四維航",
+      "close": 15.95,
+      "change_pct": 10.0,
+      "ma20": 13.72,
+      "volume": 14611,
+      "volume_ma5": 1510,
+      "volume_ratio": 9.68,
+      "foreign_net": 923,
+      "trust_net": 0,
+      "lot_cost": 15950
     },
     {
-      "code": "2364",
-      "name": "倫飛",
-      "close": 88.1,
-      "change_pct": 8.77,
-      "ma20": 73.32,
-      "volume": 2040,
-      "volume_ma5": 674,
-      "volume_ratio": 3.03,
-      "foreign_net": 197,
+      "code": "8070",
+      "name": "長華*",
+      "close": 54.4,
+      "change_pct": 9.9,
+      "ma20": 47.5,
+      "volume": 13020,
+      "volume_ma5": 2376,
+      "volume_ratio": 5.48,
+      "foreign_net": -469,
+      "trust_net": 175,
+      "lot_cost": 54400
+    },
+    {
+      "code": "1727",
+      "name": "中華化",
+      "close": 89.1,
+      "change_pct": 7.87,
+      "ma20": 74.9,
+      "volume": 14524,
+      "volume_ma5": 2900,
+      "volume_ratio": 5.01,
+      "foreign_net": 1226,
       "trust_net": 0,
-      "lot_cost": 88100
+      "lot_cost": 89100
+    },
+    {
+      "code": "2466",
+      "name": "冠西電",
+      "close": 97.0,
+      "change_pct": 7.54,
+      "ma20": 95.24,
+      "volume": 3246,
+      "volume_ma5": 1197,
+      "volume_ratio": 2.71,
+      "foreign_net": 74,
+      "trust_net": 0,
+      "lot_cost": 97000
+    },
+    {
+      "code": "6141",
+      "name": "柏承",
+      "close": 41.25,
+      "change_pct": 7.14,
+      "ma20": 35.32,
+      "volume": 7785,
+      "volume_ma5": 1187,
+      "volume_ratio": 6.56,
+      "foreign_net": 508,
+      "trust_net": 0,
+      "lot_cost": 41250
     }
   ]
 }
