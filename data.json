@@ -1,70 +1,31 @@
 {
-  "last_updated": "2026-08-19 16:02:15",
+  "last_updated": "2026-08-20 16:04:17",
   "stocks": [
     {
-      "code": "6573",
-      "name": "虹揚-KY",
-      "close": 17.75,
+      "code": "6224",
+      "name": "聚鼎",
+      "close": 72.1,
       "change_pct": 9.91,
-      "ma20": 17.2,
-      "volume": 490,
-      "volume_ma5": 224,
-      "volume_ratio": 2.19,
-      "foreign_net": 11,
+      "ma20": 58.26,
+      "volume": 1539,
+      "volume_ma5": 537,
+      "volume_ratio": 2.87,
+      "foreign_net": 127,
       "trust_net": 0,
-      "lot_cost": 17750
+      "lot_cost": 72100
     },
     {
-      "code": "6225",
-      "name": "天瀚",
-      "close": 53.6,
-      "change_pct": 9.84,
-      "ma20": 27.26,
-      "volume": 695,
-      "volume_ma5": 219,
-      "volume_ratio": 3.17,
-      "foreign_net": 12,
+      "code": "6456",
+      "name": "GIS-KY",
+      "close": 71.2,
+      "change_pct": 9.37,
+      "ma20": 62.48,
+      "volume": 9141,
+      "volume_ma5": 2181,
+      "volume_ratio": 4.19,
+      "foreign_net": 104,
       "trust_net": 0,
-      "lot_cost": 53600
-    },
-    {
-      "code": "5608",
-      "name": "四維航",
-      "close": 17.5,
-      "change_pct": 9.72,
-      "ma20": 13.9,
-      "volume": 36126,
-      "volume_ma5": 4250,
-      "volume_ratio": 8.5,
-      "foreign_net": 2722,
-      "trust_net": 0,
-      "lot_cost": 17500
-    },
-    {
-      "code": "6969",
-      "name": "成信實業*-創",
-      "close": 35.0,
-      "change_pct": 8.7,
-      "ma20": 33.31,
-      "volume": 452,
-      "volume_ma5": 138,
-      "volume_ratio": 3.27,
-      "foreign_net": 16,
-      "trust_net": 0,
-      "lot_cost": 35000
-    },
-    {
-      "code": "6141",
-      "name": "柏承",
-      "close": 44.5,
-      "change_pct": 7.88,
-      "ma20": 35.45,
-      "volume": 7758,
-      "volume_ma5": 2627,
-      "volume_ratio": 2.95,
-      "foreign_net": 2372,
-      "trust_net": 0,
-      "lot_cost": 44500
+      "lot_cost": 71200
     }
   ]
 }
