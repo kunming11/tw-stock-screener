@@ -1,83 +1,31 @@
 {
-  "last_updated": "2026-08-28 02:22:33",
+  "last_updated": "2026-08-29 03:31:28",
   "stocks": [
-    {
-      "code": "3543",
-      "name": "州巧",
-      "close": 45.1,
-      "change_pct": 10.0,
-      "ma20": 38.67,
-      "volume": 6940,
-      "volume_ma5": 2984,
-      "volume_ratio": 2.33,
-      "foreign_net": 382,
-      "trust_net": 0,
-      "lot_cost": 45100
-    },
-    {
-      "code": "6668",
-      "name": "中揚光",
-      "close": 39.05,
-      "change_pct": 10.0,
-      "ma20": 35.76,
-      "volume": 2812,
-      "volume_ma5": 393,
-      "volume_ratio": 7.15,
-      "foreign_net": 222,
-      "trust_net": 0,
-      "lot_cost": 39050
-    },
-    {
-      "code": "2426",
-      "name": "鼎元",
-      "close": 99.8,
-      "change_pct": 9.91,
-      "ma20": 69.15,
-      "volume": 81769,
-      "volume_ma5": 38391,
-      "volume_ratio": 2.13,
-      "foreign_net": 4311,
-      "trust_net": 0,
-      "lot_cost": 99800
-    },
     {
       "code": "2491",
       "name": "吉祥全",
-      "close": 46.65,
-      "change_pct": 9.64,
-      "ma20": 34.0,
-      "volume": 5814,
-      "volume_ma5": 1490,
-      "volume_ratio": 3.9,
-      "foreign_net": 1231,
-      "trust_net": -1,
-      "lot_cost": 46650
+      "close": 56.4,
+      "change_pct": 9.94,
+      "ma20": 35.45,
+      "volume": 5037,
+      "volume_ma5": 2467,
+      "volume_ratio": 2.04,
+      "foreign_net": 423,
+      "trust_net": 0,
+      "lot_cost": 56400
     },
     {
-      "code": "5471",
-      "name": "松翰",
-      "close": 60.6,
-      "change_pct": 8.21,
-      "ma20": 55.81,
-      "volume": 7697,
-      "volume_ma5": 1507,
-      "volume_ratio": 5.11,
-      "foreign_net": 661,
+      "code": "6906",
+      "name": "現觀科",
+      "close": 81.2,
+      "change_pct": 7.84,
+      "ma20": 71.82,
+      "volume": 84,
+      "volume_ma5": 16,
+      "volume_ratio": 5.31,
+      "foreign_net": 1,
       "trust_net": 0,
-      "lot_cost": 60600
-    },
-    {
-      "code": "6269",
-      "name": "台郡",
-      "close": 66.3,
-      "change_pct": 7.11,
-      "ma20": 61.94,
-      "volume": 4836,
-      "volume_ma5": 1972,
-      "volume_ratio": 2.45,
-      "foreign_net": 6525,
-      "trust_net": 0,
-      "lot_cost": 66300
+      "lot_cost": 81200
     }
   ]
 }
