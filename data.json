@@ -1,31 +1,57 @@
 {
-  "last_updated": "2026-08-29 03:31:28",
+  "last_updated": "2026-08-31 23:15:11",
   "stocks": [
     {
-      "code": "2491",
-      "name": "吉祥全",
-      "close": 56.4,
-      "change_pct": 9.94,
-      "ma20": 35.45,
-      "volume": 5037,
-      "volume_ma5": 2467,
-      "volume_ratio": 2.04,
-      "foreign_net": 423,
-      "trust_net": 0,
-      "lot_cost": 56400
+      "code": "1326",
+      "name": "台化",
+      "close": 68.3,
+      "change_pct": 9.98,
+      "ma20": 59.66,
+      "volume": 71134,
+      "volume_ma5": 26617,
+      "volume_ratio": 2.67,
+      "foreign_net": 18152,
+      "trust_net": -68,
+      "lot_cost": 68300
     },
     {
-      "code": "6906",
-      "name": "現觀科",
-      "close": 81.2,
-      "change_pct": 7.84,
-      "ma20": 71.82,
-      "volume": 84,
-      "volume_ma5": 16,
-      "volume_ratio": 5.31,
-      "foreign_net": 1,
+      "code": "1312",
+      "name": "國喬",
+      "close": 15.55,
+      "change_pct": 9.89,
+      "ma20": 12.34,
+      "volume": 108378,
+      "volume_ma5": 46360,
+      "volume_ratio": 2.34,
+      "foreign_net": 14188,
       "trust_net": 0,
-      "lot_cost": 81200
+      "lot_cost": 15550
+    },
+    {
+      "code": "7835",
+      "name": "永悅健康-創",
+      "close": 27.9,
+      "change_pct": 9.84,
+      "ma20": 24.05,
+      "volume": 243,
+      "volume_ma5": 57,
+      "volume_ratio": 4.26,
+      "foreign_net": 11,
+      "trust_net": 0,
+      "lot_cost": 27900
+    },
+    {
+      "code": "6205",
+      "name": "詮欣",
+      "close": 71.1,
+      "change_pct": 8.05,
+      "ma20": 62.46,
+      "volume": 1767,
+      "volume_ma5": 812,
+      "volume_ratio": 2.18,
+      "foreign_net": 212,
+      "trust_net": 0,
+      "lot_cost": 71100
     }
   ]
 }
