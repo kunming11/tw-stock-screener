@@ -1,70 +1,31 @@
 {
-  "last_updated": "2026-09-09 20:25:57",
+  "last_updated": "2026-09-10 20:19:27",
   "stocks": [
     {
-      "code": "2460",
-      "name": "建通",
-      "close": 30.9,
-      "change_pct": 9.96,
-      "ma20": 28.92,
-      "volume": 857,
-      "volume_ma5": 184,
-      "volume_ratio": 4.66,
-      "foreign_net": 84,
+      "code": "3346",
+      "name": "麗清",
+      "close": 20.35,
+      "change_pct": 10.0,
+      "ma20": 19.64,
+      "volume": 1427,
+      "volume_ma5": 213,
+      "volume_ratio": 6.71,
+      "foreign_net": 7,
       "trust_net": 0,
-      "lot_cost": 30900
+      "lot_cost": 20350
     },
     {
-      "code": "3229",
-      "name": "晟鈦",
-      "close": 60.7,
-      "change_pct": 9.96,
-      "ma20": 54.44,
-      "volume": 5356,
-      "volume_ma5": 1184,
-      "volume_ratio": 4.53,
-      "foreign_net": 1413,
+      "code": "6225",
+      "name": "天瀚",
+      "close": 74.3,
+      "change_pct": 9.91,
+      "ma20": 58.92,
+      "volume": 192,
+      "volume_ma5": 85,
+      "volume_ratio": 2.26,
+      "foreign_net": 4,
       "trust_net": 0,
-      "lot_cost": 60700
-    },
-    {
-      "code": "2413",
-      "name": "環科",
-      "close": 50.5,
-      "change_pct": 9.9,
-      "ma20": 44.23,
-      "volume": 9949,
-      "volume_ma5": 3877,
-      "volume_ratio": 2.57,
-      "foreign_net": 71,
-      "trust_net": 0,
-      "lot_cost": 50500
-    },
-    {
-      "code": "1409",
-      "name": "新纖",
-      "close": 26.85,
-      "change_pct": 9.82,
-      "ma20": 24.33,
-      "volume": 88978,
-      "volume_ma5": 15007,
-      "volume_ratio": 5.93,
-      "foreign_net": 17976,
-      "trust_net": 0,
-      "lot_cost": 26850
-    },
-    {
-      "code": "4119",
-      "name": "旭富",
-      "close": 57.7,
-      "change_pct": 7.25,
-      "ma20": 54.0,
-      "volume": 708,
-      "volume_ma5": 228,
-      "volume_ratio": 3.11,
-      "foreign_net": 164,
-      "trust_net": 0,
-      "lot_cost": 57700
+      "lot_cost": 74300
     }
   ]
 }
