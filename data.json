@@ -1,31 +1,70 @@
 {
-  "last_updated": "2026-09-15 20:47:30",
+  "last_updated": "2026-09-16 20:42:10",
   "stocks": [
     {
-      "code": "4807",
-      "name": "日成-KY",
-      "close": 30.8,
+      "code": "2489",
+      "name": "瑞軒",
+      "close": 41.25,
       "change_pct": 10.0,
-      "ma20": 28.61,
-      "volume": 372,
-      "volume_ma5": 158,
-      "volume_ratio": 2.36,
-      "foreign_net": 102,
-      "trust_net": 0,
-      "lot_cost": 30800
+      "ma20": 39.48,
+      "volume": 36243,
+      "volume_ma5": 14735,
+      "volume_ratio": 2.46,
+      "foreign_net": 6109,
+      "trust_net": -23,
+      "lot_cost": 41250
     },
     {
-      "code": "6226",
-      "name": "光鼎",
-      "close": 36.3,
-      "change_pct": 10.0,
-      "ma20": 29.77,
-      "volume": 81110,
-      "volume_ma5": 24580,
-      "volume_ratio": 3.3,
-      "foreign_net": 4728,
+      "code": "4956",
+      "name": "光鋐",
+      "close": 35.25,
+      "change_pct": 9.98,
+      "ma20": 34.84,
+      "volume": 7632,
+      "volume_ma5": 1307,
+      "volume_ratio": 5.84,
+      "foreign_net": 1204,
       "trust_net": 0,
-      "lot_cost": 36300
+      "lot_cost": 35250
+    },
+    {
+      "code": "2302",
+      "name": "麗正",
+      "close": 44.2,
+      "change_pct": 9.95,
+      "ma20": 42.77,
+      "volume": 5698,
+      "volume_ma5": 1617,
+      "volume_ratio": 3.52,
+      "foreign_net": 1742,
+      "trust_net": 0,
+      "lot_cost": 44200
+    },
+    {
+      "code": "3021",
+      "name": "鴻名",
+      "close": 27.1,
+      "change_pct": 9.94,
+      "ma20": 22.26,
+      "volume": 1379,
+      "volume_ma5": 498,
+      "volume_ratio": 2.77,
+      "foreign_net": 15,
+      "trust_net": 0,
+      "lot_cost": 27100
+    },
+    {
+      "code": "6168",
+      "name": "宏齊",
+      "close": 32.15,
+      "change_pct": 9.91,
+      "ma20": 28.56,
+      "volume": 17471,
+      "volume_ma5": 5457,
+      "volume_ratio": 3.2,
+      "foreign_net": 2519,
+      "trust_net": 0,
+      "lot_cost": 32150
     }
   ]
 }
