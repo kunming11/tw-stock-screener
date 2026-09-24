@@ -1,57 +1,44 @@
 {
-  "last_updated": "2026-09-23 20:51:09",
+  "last_updated": "2026-09-24 20:49:13",
   "stocks": [
     {
-      "code": "6243",
-      "name": "迅杰",
-      "close": 41.25,
-      "change_pct": 10.0,
-      "ma20": 38.67,
-      "volume": 1521,
-      "volume_ma5": 210,
-      "volume_ratio": 7.23,
-      "foreign_net": 399,
+      "code": "1809",
+      "name": "中釉",
+      "close": 45.35,
+      "change_pct": 9.94,
+      "ma20": 38.69,
+      "volume": 7067,
+      "volume_ma5": 3093,
+      "volume_ratio": 2.28,
+      "foreign_net": 557,
       "trust_net": 0,
-      "lot_cost": 41250
+      "lot_cost": 45350
     },
     {
-      "code": "6205",
-      "name": "詮欣",
-      "close": 72.0,
-      "change_pct": 9.92,
-      "ma20": 65.37,
-      "volume": 4229,
-      "volume_ma5": 871,
-      "volume_ratio": 4.86,
-      "foreign_net": 644,
+      "code": "4566",
+      "name": "時碩工業",
+      "close": 74.3,
+      "change_pct": 9.91,
+      "ma20": 64.97,
+      "volume": 7822,
+      "volume_ma5": 755,
+      "volume_ratio": 10.36,
+      "foreign_net": 2891,
       "trust_net": 0,
-      "lot_cost": 72000
+      "lot_cost": 74300
     },
     {
-      "code": "1235",
-      "name": "興泰",
-      "close": 41.15,
-      "change_pct": 9.88,
-      "ma20": 37.95,
-      "volume": 223,
-      "volume_ma5": 16,
-      "volume_ratio": 13.88,
-      "foreign_net": 32,
+      "code": "6155",
+      "name": "鈞寶",
+      "close": 60.2,
+      "change_pct": 7.12,
+      "ma20": 56.7,
+      "volume": 3759,
+      "volume_ma5": 657,
+      "volume_ratio": 5.72,
+      "foreign_net": 537,
       "trust_net": 0,
-      "lot_cost": 41150
-    },
-    {
-      "code": "6838",
-      "name": "台新藥",
-      "close": 26.25,
-      "change_pct": 9.83,
-      "ma20": 23.84,
-      "volume": 890,
-      "volume_ma5": 115,
-      "volume_ratio": 7.76,
-      "foreign_net": 162,
-      "trust_net": 0,
-      "lot_cost": 26250
+      "lot_cost": 60200
     }
   ]
 }
