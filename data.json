@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-24 20:49:13",
+  "last_updated": "2026-09-25 20:52:43",
   "stocks": [
     {
       "code": "1809",
@@ -7,9 +7,9 @@
       "close": 45.35,
       "change_pct": 9.94,
       "ma20": 38.69,
-      "volume": 7067,
+      "volume": 7006,
       "volume_ma5": 3093,
-      "volume_ratio": 2.28,
+      "volume_ratio": 2.27,
       "foreign_net": 557,
       "trust_net": 0,
       "lot_cost": 45350
@@ -20,9 +20,9 @@
       "close": 74.3,
       "change_pct": 9.91,
       "ma20": 64.97,
-      "volume": 7822,
+      "volume": 7739,
       "volume_ma5": 755,
-      "volume_ratio": 10.36,
+      "volume_ratio": 10.25,
       "foreign_net": 2891,
       "trust_net": 0,
       "lot_cost": 74300
@@ -33,9 +33,9 @@
       "close": 60.2,
       "change_pct": 7.12,
       "ma20": 56.7,
-      "volume": 3759,
+      "volume": 3731,
       "volume_ma5": 657,
-      "volume_ratio": 5.72,
+      "volume_ratio": 5.68,
       "foreign_net": 537,
       "trust_net": 0,
       "lot_cost": 60200
