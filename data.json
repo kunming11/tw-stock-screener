@@ -1,70 +1,44 @@
 {
-  "last_updated": "2026-10-06 00:16:12",
+  "last_updated": "2026-10-06 22:19:26",
   "stocks": [
     {
-      "code": "4720",
-      "name": "德淵",
-      "close": 20.95,
-      "change_pct": 9.97,
-      "ma20": 18.82,
-      "volume": 3551,
-      "volume_ma5": 291,
-      "volume_ratio": 12.2,
-      "foreign_net": 337,
+      "code": "1711",
+      "name": "永光",
+      "close": 48.6,
+      "change_pct": 9.95,
+      "ma20": 40.27,
+      "volume": 32713,
+      "volume_ma5": 9145,
+      "volume_ratio": 3.58,
+      "foreign_net": 2053,
       "trust_net": 0,
-      "lot_cost": 20950
+      "lot_cost": 48600
     },
     {
-      "code": "9933",
-      "name": "中鼎",
-      "close": 45.8,
-      "change_pct": 9.96,
-      "ma20": 41.08,
-      "volume": 20965,
-      "volume_ma5": 1656,
-      "volume_ratio": 12.66,
-      "foreign_net": 3959,
-      "trust_net": -26,
-      "lot_cost": 45800
-    },
-    {
-      "code": "1735",
-      "name": "日勝化",
-      "close": 22.15,
-      "change_pct": 9.93,
-      "ma20": 20.21,
-      "volume": 348,
-      "volume_ma5": 36,
-      "volume_ratio": 9.77,
-      "foreign_net": 9,
-      "trust_net": 0,
-      "lot_cost": 22150
-    },
-    {
-      "code": "4927",
-      "name": "泰鼎-KY",
-      "close": 48.15,
-      "change_pct": 9.93,
-      "ma20": 42.99,
-      "volume": 17302,
-      "volume_ma5": 2812,
-      "volume_ratio": 6.15,
-      "foreign_net": 1332,
-      "trust_net": 0,
-      "lot_cost": 48150
-    },
-    {
-      "code": "3701",
-      "name": "大眾控",
-      "close": 55.4,
+      "code": "6117",
+      "name": "迎廣",
+      "close": 68.7,
       "change_pct": 9.92,
-      "ma20": 42.41,
-      "volume": 10076,
-      "volume_ma5": 2916,
-      "volume_ratio": 3.46,
-      "foreign_net": 320,
+      "ma20": 62.12,
+      "volume": 1680,
+      "volume_ma5": 152,
+      "volume_ratio": 11.05,
+      "foreign_net": 312,
       "trust_net": 0,
-      "lot_cost": 55400
+      "lot_cost": 68700
+    },
+    {
+      "code": "2415",
+      "name": "錩新",
+      "close": 30.65,
+      "change_pct": 9.86,
+      "ma20": 27.53,
+      "volume": 1373,
+      "volume_ma5": 116,
+      "volume_ratio": 11.81,
+      "foreign_net": 276,
+      "trust_net": 0,
+      "lot_cost": 30650
     }
   ]
 }
