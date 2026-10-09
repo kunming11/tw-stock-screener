@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-08 22:45:13",
+  "last_updated": "2026-10-09 22:29:20",
   "stocks": [
     {
       "code": "3447",
@@ -7,9 +7,9 @@
       "close": 30.25,
       "change_pct": 10.0,
       "ma20": 27.68,
-      "volume": 675,
+      "volume": 668,
       "volume_ma5": 48,
-      "volume_ratio": 14.0,
+      "volume_ratio": 13.85,
       "foreign_net": 113,
       "trust_net": 0,
       "lot_cost": 30250
@@ -20,9 +20,9 @@
       "close": 17.1,
       "change_pct": 9.97,
       "ma20": 14.35,
-      "volume": 4679,
+      "volume": 4654,
       "volume_ma5": 762,
-      "volume_ratio": 6.14,
+      "volume_ratio": 6.11,
       "foreign_net": 742,
       "trust_net": 0,
       "lot_cost": 17100
@@ -33,9 +33,9 @@
       "close": 46.05,
       "change_pct": 9.9,
       "ma20": 43.07,
-      "volume": 1469,
+      "volume": 1449,
       "volume_ma5": 99,
-      "volume_ratio": 14.81,
+      "volume_ratio": 14.61,
       "foreign_net": 86,
       "trust_net": 0,
       "lot_cost": 46050
@@ -46,9 +46,9 @@
       "close": 41.7,
       "change_pct": 9.88,
       "ma20": 37.32,
-      "volume": 599,
+      "volume": 591,
       "volume_ma5": 53,
-      "volume_ratio": 11.26,
+      "volume_ratio": 11.11,
       "foreign_net": 62,
       "trust_net": 0,
       "lot_cost": 41700
@@ -59,9 +59,9 @@
       "close": 19.6,
       "change_pct": 8.59,
       "ma20": 17.13,
-      "volume": 1435,
+      "volume": 1428,
       "volume_ma5": 393,
-      "volume_ratio": 3.65,
+      "volume_ratio": 3.63,
       "foreign_net": 264,
       "trust_net": 0,
       "lot_cost": 19600
@@ -72,9 +72,9 @@
       "close": 34.25,
       "change_pct": 8.39,
       "ma20": 30.19,
-      "volume": 538,
+      "volume": 534,
       "volume_ma5": 206,
-      "volume_ratio": 2.61,
+      "volume_ratio": 2.59,
       "foreign_net": 144,
       "trust_net": 0,
       "lot_cost": 34250
@@ -85,9 +85,9 @@
       "close": 81.3,
       "change_pct": 7.82,
       "ma20": 66.62,
-      "volume": 245059,
+      "volume": 244219,
       "volume_ma5": 42784,
-      "volume_ratio": 5.73,
+      "volume_ratio": 5.71,
       "foreign_net": 14225,
       "trust_net": 13940,
       "lot_cost": 81300
