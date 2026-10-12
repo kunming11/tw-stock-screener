@@ -1,19 +1,6 @@
 {
-  "last_updated": "2026-10-09 22:29:20",
+  "last_updated": "2026-10-13 00:53:57",
   "stocks": [
-    {
-      "code": "3447",
-      "name": "展達",
-      "close": 30.25,
-      "change_pct": 10.0,
-      "ma20": 27.68,
-      "volume": 668,
-      "volume_ma5": 48,
-      "volume_ratio": 13.85,
-      "foreign_net": 113,
-      "trust_net": 0,
-      "lot_cost": 30250
-    },
     {
       "code": "4934",
       "name": "太極",
@@ -23,22 +10,22 @@
       "volume": 4654,
       "volume_ma5": 762,
       "volume_ratio": 6.11,
-      "foreign_net": 742,
+      "foreign_net": 82,
       "trust_net": 0,
       "lot_cost": 17100
     },
     {
-      "code": "1615",
-      "name": "大山",
-      "close": 46.05,
+      "code": "9919",
+      "name": "康那香",
+      "close": 16.1,
       "change_pct": 9.9,
-      "ma20": 43.07,
-      "volume": 1449,
-      "volume_ma5": 99,
-      "volume_ratio": 14.61,
-      "foreign_net": 86,
+      "ma20": 14.09,
+      "volume": 5184,
+      "volume_ma5": 638,
+      "volume_ratio": 8.12,
+      "foreign_net": 169,
       "trust_net": 0,
-      "lot_cost": 46050
+      "lot_cost": 16100
     },
     {
       "code": "6504",
@@ -49,35 +36,9 @@
       "volume": 591,
       "volume_ma5": 53,
       "volume_ratio": 11.11,
-      "foreign_net": 62,
+      "foreign_net": 24,
       "trust_net": 0,
       "lot_cost": 41700
-    },
-    {
-      "code": "4178",
-      "name": "永笙-KY",
-      "close": 19.6,
-      "change_pct": 8.59,
-      "ma20": 17.13,
-      "volume": 1428,
-      "volume_ma5": 393,
-      "volume_ratio": 3.63,
-      "foreign_net": 264,
-      "trust_net": 0,
-      "lot_cost": 19600
-    },
-    {
-      "code": "4807",
-      "name": "日成-KY",
-      "close": 34.25,
-      "change_pct": 8.39,
-      "ma20": 30.19,
-      "volume": 534,
-      "volume_ma5": 206,
-      "volume_ratio": 2.59,
-      "foreign_net": 144,
-      "trust_net": 0,
-      "lot_cost": 34250
     },
     {
       "code": "1301",
@@ -88,8 +49,8 @@
       "volume": 244219,
       "volume_ma5": 42784,
       "volume_ratio": 5.71,
-      "foreign_net": 14225,
-      "trust_net": 13940,
+      "foreign_net": -36881,
+      "trust_net": 19104,
       "lot_cost": 81300
     }
   ]
