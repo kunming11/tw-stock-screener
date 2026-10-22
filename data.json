@@ -1,44 +1,31 @@
 {
-  "last_updated": "2026-10-21 21:03:48",
+  "last_updated": "2026-10-22 21:05:34",
   "stocks": [
+    {
+      "code": "2465",
+      "name": "麗臺",
+      "close": 96.2,
+      "change_pct": 9.94,
+      "ma20": 88.62,
+      "volume": 10474,
+      "volume_ma5": 1149,
+      "volume_ratio": 9.11,
+      "foreign_net": 3143,
+      "trust_net": 0,
+      "lot_cost": 96200
+    },
     {
       "code": "4526",
       "name": "東台",
-      "close": 38.05,
-      "change_pct": 9.97,
-      "ma20": 33.55,
-      "volume": 10866,
-      "volume_ma5": 5342,
-      "volume_ratio": 2.03,
-      "foreign_net": 1797,
+      "close": 41.05,
+      "change_pct": 7.88,
+      "ma20": 33.98,
+      "volume": 56808,
+      "volume_ma5": 7079,
+      "volume_ratio": 8.02,
+      "foreign_net": 9978,
       "trust_net": 0,
-      "lot_cost": 38050
-    },
-    {
-      "code": "4720",
-      "name": "德淵",
-      "close": 29.25,
-      "change_pct": 9.96,
-      "ma20": 22.9,
-      "volume": 33952,
-      "volume_ma5": 7249,
-      "volume_ratio": 4.68,
-      "foreign_net": 4092,
-      "trust_net": 0,
-      "lot_cost": 29250
-    },
-    {
-      "code": "4949",
-      "name": "有成精密",
-      "close": 85.8,
-      "change_pct": 8.47,
-      "ma20": 79.61,
-      "volume": 4613,
-      "volume_ma5": 582,
-      "volume_ratio": 7.93,
-      "foreign_net": 1191,
-      "trust_net": 0,
-      "lot_cost": 85800
+      "lot_cost": 41050
     }
   ]
 }
