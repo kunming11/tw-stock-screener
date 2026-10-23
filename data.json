@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-22 21:05:34",
+  "last_updated": "2026-10-23 20:44:51",
   "stocks": [
     {
       "code": "2465",
@@ -7,9 +7,9 @@
       "close": 96.2,
       "change_pct": 9.94,
       "ma20": 88.62,
-      "volume": 10474,
+      "volume": 10344,
       "volume_ma5": 1149,
-      "volume_ratio": 9.11,
+      "volume_ratio": 9.0,
       "foreign_net": 3143,
       "trust_net": 0,
       "lot_cost": 96200
@@ -20,9 +20,9 @@
       "close": 41.05,
       "change_pct": 7.88,
       "ma20": 33.98,
-      "volume": 56808,
+      "volume": 56676,
       "volume_ma5": 7079,
-      "volume_ratio": 8.02,
+      "volume_ratio": 8.01,
       "foreign_net": 9978,
       "trust_net": 0,
       "lot_cost": 41050
