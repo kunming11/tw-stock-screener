@@ -1,57 +1,44 @@
 {
-  "last_updated": "2026-10-28 22:13:04",
+  "last_updated": "2026-10-29 22:33:21",
   "stocks": [
     {
-      "code": "2444",
-      "name": "兆勁",
-      "close": 15.95,
+      "code": "3321",
+      "name": "同泰",
+      "close": 21.45,
       "change_pct": 10.0,
-      "ma20": 15.21,
-      "volume": 2496,
-      "volume_ma5": 859,
-      "volume_ratio": 2.91,
-      "foreign_net": 370,
+      "ma20": 17.53,
+      "volume": 3351,
+      "volume_ma5": 244,
+      "volume_ratio": 13.72,
+      "foreign_net": 47,
       "trust_net": 0,
-      "lot_cost": 15950
+      "lot_cost": 21450
     },
     {
-      "code": "6225",
-      "name": "天瀚",
-      "close": 85.8,
-      "change_pct": 10.0,
-      "ma20": 75.83,
-      "volume": 252,
-      "volume_ma5": 102,
-      "volume_ratio": 2.47,
-      "foreign_net": 39,
+      "code": "1786",
+      "name": "科妍",
+      "close": 43.25,
+      "change_pct": 9.91,
+      "ma20": 40.98,
+      "volume": 226,
+      "volume_ma5": 107,
+      "volume_ratio": 2.1,
+      "foreign_net": 27,
       "trust_net": 0,
-      "lot_cost": 85800
+      "lot_cost": 43250
     },
     {
-      "code": "4526",
-      "name": "東台",
-      "close": 49.65,
-      "change_pct": 9.97,
-      "ma20": 36.02,
-      "volume": 74168,
-      "volume_ma5": 25308,
-      "volume_ratio": 2.93,
-      "foreign_net": 3773,
+      "code": "2352",
+      "name": "佳世達",
+      "close": 32.8,
+      "change_pct": 9.88,
+      "ma20": 29.37,
+      "volume": 87217,
+      "volume_ma5": 4748,
+      "volume_ratio": 18.37,
+      "foreign_net": 786,
       "trust_net": 0,
-      "lot_cost": 49650
-    },
-    {
-      "code": "2491",
-      "name": "吉祥全",
-      "close": 40.4,
-      "change_pct": 9.93,
-      "ma20": 37.68,
-      "volume": 1374,
-      "volume_ma5": 429,
-      "volume_ratio": 3.2,
-      "foreign_net": 297,
-      "trust_net": 0,
-      "lot_cost": 40400
+      "lot_cost": 32800
     }
   ]
 }
