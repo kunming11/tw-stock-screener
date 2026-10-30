@@ -1,44 +1,18 @@
 {
-  "last_updated": "2026-10-29 22:33:21",
+  "last_updated": "2026-10-30 22:24:39",
   "stocks": [
     {
-      "code": "3321",
-      "name": "同泰",
-      "close": 21.45,
-      "change_pct": 10.0,
-      "ma20": 17.53,
-      "volume": 3351,
-      "volume_ma5": 244,
-      "volume_ratio": 13.72,
-      "foreign_net": 47,
+      "code": "4737",
+      "name": "華廣",
+      "close": 65.6,
+      "change_pct": 8.79,
+      "ma20": 57.37,
+      "volume": 454,
+      "volume_ma5": 64,
+      "volume_ratio": 7.11,
+      "foreign_net": 49,
       "trust_net": 0,
-      "lot_cost": 21450
-    },
-    {
-      "code": "1786",
-      "name": "科妍",
-      "close": 43.25,
-      "change_pct": 9.91,
-      "ma20": 40.98,
-      "volume": 226,
-      "volume_ma5": 107,
-      "volume_ratio": 2.1,
-      "foreign_net": 27,
-      "trust_net": 0,
-      "lot_cost": 43250
-    },
-    {
-      "code": "2352",
-      "name": "佳世達",
-      "close": 32.8,
-      "change_pct": 9.88,
-      "ma20": 29.37,
-      "volume": 87217,
-      "volume_ma5": 4748,
-      "volume_ratio": 18.37,
-      "foreign_net": 786,
-      "trust_net": 0,
-      "lot_cost": 32800
+      "lot_cost": 65600
     }
   ]
 }
