@@ -1,31 +1,70 @@
 {
-  "last_updated": "2026-11-05 23:41:52",
+  "last_updated": "2026-11-06 23:15:04",
   "stocks": [
     {
-      "code": "8467",
-      "name": "波力-KY",
-      "close": 96.8,
+      "code": "6152",
+      "name": "百一",
+      "close": 18.7,
       "change_pct": 10.0,
-      "ma20": 95.99,
-      "volume": 98,
-      "volume_ma5": 18,
-      "volume_ratio": 5.46,
-      "foreign_net": 4,
+      "ma20": 18.46,
+      "volume": 7762,
+      "volume_ma5": 3665,
+      "volume_ratio": 2.12,
+      "foreign_net": 2222,
       "trust_net": 0,
-      "lot_cost": 96800
+      "lot_cost": 18700
     },
     {
-      "code": "6698",
-      "name": "旭暉應材",
-      "close": 30.55,
-      "change_pct": 9.89,
-      "ma20": 30.39,
-      "volume": 963,
-      "volume_ma5": 151,
-      "volume_ratio": 6.39,
-      "foreign_net": 42,
+      "code": "6443",
+      "name": "元晶",
+      "close": 25.95,
+      "change_pct": 9.96,
+      "ma20": 25.18,
+      "volume": 40689,
+      "volume_ma5": 8193,
+      "volume_ratio": 4.97,
+      "foreign_net": 130,
       "trust_net": 0,
-      "lot_cost": 30550
+      "lot_cost": 25950
+    },
+    {
+      "code": "1416",
+      "name": "廣豐",
+      "close": 16.35,
+      "change_pct": 9.73,
+      "ma20": 13.42,
+      "volume": 19342,
+      "volume_ma5": 4183,
+      "volume_ratio": 4.62,
+      "foreign_net": 656,
+      "trust_net": 0,
+      "lot_cost": 16350
+    },
+    {
+      "code": "3576",
+      "name": "聯合再生",
+      "close": 17.8,
+      "change_pct": 8.54,
+      "ma20": 17.17,
+      "volume": 48491,
+      "volume_ma5": 12992,
+      "volume_ratio": 3.73,
+      "foreign_net": 2498,
+      "trust_net": 0,
+      "lot_cost": 17800
+    },
+    {
+      "code": "6112",
+      "name": "邁達特",
+      "close": 51.4,
+      "change_pct": 7.76,
+      "ma20": 48.19,
+      "volume": 13008,
+      "volume_ma5": 6037,
+      "volume_ratio": 2.15,
+      "foreign_net": 1815,
+      "trust_net": 0,
+      "lot_cost": 51400
     }
   ]
 }
