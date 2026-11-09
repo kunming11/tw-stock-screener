@@ -1,29 +1,16 @@
 {
-  "last_updated": "2026-11-06 23:15:04",
+  "last_updated": "2026-11-10 01:43:46",
   "stocks": [
-    {
-      "code": "6152",
-      "name": "百一",
-      "close": 18.7,
-      "change_pct": 10.0,
-      "ma20": 18.46,
-      "volume": 7762,
-      "volume_ma5": 3665,
-      "volume_ratio": 2.12,
-      "foreign_net": 2222,
-      "trust_net": 0,
-      "lot_cost": 18700
-    },
     {
       "code": "6443",
       "name": "元晶",
       "close": 25.95,
       "change_pct": 9.96,
       "ma20": 25.18,
-      "volume": 40689,
+      "volume": 40641,
       "volume_ma5": 8193,
-      "volume_ratio": 4.97,
-      "foreign_net": 130,
+      "volume_ratio": 4.96,
+      "foreign_net": 1349,
       "trust_net": 0,
       "lot_cost": 25950
     },
@@ -33,10 +20,10 @@
       "close": 16.35,
       "change_pct": 9.73,
       "ma20": 13.42,
-      "volume": 19342,
+      "volume": 19293,
       "volume_ma5": 4183,
-      "volume_ratio": 4.62,
-      "foreign_net": 656,
+      "volume_ratio": 4.61,
+      "foreign_net": 745,
       "trust_net": 0,
       "lot_cost": 16350
     },
@@ -46,25 +33,25 @@
       "close": 17.8,
       "change_pct": 8.54,
       "ma20": 17.17,
-      "volume": 48491,
+      "volume": 48504,
       "volume_ma5": 12992,
       "volume_ratio": 3.73,
-      "foreign_net": 2498,
+      "foreign_net": 1207,
       "trust_net": 0,
       "lot_cost": 17800
     },
     {
-      "code": "6112",
-      "name": "邁達特",
-      "close": 51.4,
-      "change_pct": 7.76,
-      "ma20": 48.19,
-      "volume": 13008,
-      "volume_ma5": 6037,
-      "volume_ratio": 2.15,
-      "foreign_net": 1815,
+      "code": "6921",
+      "name": "嘉雨思-創",
+      "close": 64.9,
+      "change_pct": 8.53,
+      "ma20": 64.33,
+      "volume": 20,
+      "volume_ma5": 5,
+      "volume_ratio": 4.0,
+      "foreign_net": 1,
       "trust_net": 0,
-      "lot_cost": 51400
+      "lot_cost": 64900
     }
   ]
 }
