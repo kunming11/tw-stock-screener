@@ -1,57 +1,31 @@
 {
-  "last_updated": "2026-11-10 01:43:46",
+  "last_updated": "2026-11-10 23:42:51",
   "stocks": [
     {
-      "code": "6443",
-      "name": "元晶",
-      "close": 25.95,
-      "change_pct": 9.96,
-      "ma20": 25.18,
-      "volume": 40641,
-      "volume_ma5": 8193,
-      "volume_ratio": 4.96,
-      "foreign_net": 1349,
+      "code": "6108",
+      "name": "競國",
+      "close": 32.5,
+      "change_pct": 9.98,
+      "ma20": 30.45,
+      "volume": 5409,
+      "volume_ma5": 2537,
+      "volume_ratio": 2.13,
+      "foreign_net": 2115,
       "trust_net": 0,
-      "lot_cost": 25950
+      "lot_cost": 32500
     },
     {
-      "code": "1416",
-      "name": "廣豐",
-      "close": 16.35,
-      "change_pct": 9.73,
-      "ma20": 13.42,
-      "volume": 19293,
-      "volume_ma5": 4183,
-      "volume_ratio": 4.61,
-      "foreign_net": 745,
+      "code": "6757",
+      "name": "台灣虎航",
+      "close": 59.3,
+      "change_pct": 8.21,
+      "ma20": 53.65,
+      "volume": 6136,
+      "volume_ma5": 1973,
+      "volume_ratio": 3.11,
+      "foreign_net": 3179,
       "trust_net": 0,
-      "lot_cost": 16350
-    },
-    {
-      "code": "3576",
-      "name": "聯合再生",
-      "close": 17.8,
-      "change_pct": 8.54,
-      "ma20": 17.17,
-      "volume": 48504,
-      "volume_ma5": 12992,
-      "volume_ratio": 3.73,
-      "foreign_net": 1207,
-      "trust_net": 0,
-      "lot_cost": 17800
-    },
-    {
-      "code": "6921",
-      "name": "嘉雨思-創",
-      "close": 64.9,
-      "change_pct": 8.53,
-      "ma20": 64.33,
-      "volume": 20,
-      "volume_ma5": 5,
-      "volume_ratio": 4.0,
-      "foreign_net": 1,
-      "trust_net": 0,
-      "lot_cost": 64900
+      "lot_cost": 59300
     }
   ]
 }
