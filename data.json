@@ -1,31 +1,83 @@
 {
-  "last_updated": "2026-11-10 23:42:51",
+  "last_updated": "2026-11-11 23:30:26",
   "stocks": [
     {
-      "code": "6108",
-      "name": "競國",
-      "close": 32.5,
+      "code": "4927",
+      "name": "泰鼎-KY",
+      "close": 59.5,
       "change_pct": 9.98,
-      "ma20": 30.45,
-      "volume": 5409,
-      "volume_ma5": 2537,
-      "volume_ratio": 2.13,
-      "foreign_net": 2115,
+      "ma20": 53.25,
+      "volume": 31580,
+      "volume_ma5": 10098,
+      "volume_ratio": 3.13,
+      "foreign_net": 11814,
       "trust_net": 0,
-      "lot_cost": 32500
+      "lot_cost": 59500
     },
     {
-      "code": "6757",
-      "name": "台灣虎航",
-      "close": 59.3,
-      "change_pct": 8.21,
-      "ma20": 53.65,
-      "volume": 6136,
-      "volume_ma5": 1973,
-      "volume_ratio": 3.11,
-      "foreign_net": 3179,
+      "code": "8213",
+      "name": "志超",
+      "close": 42.5,
+      "change_pct": 9.96,
+      "ma20": 40.19,
+      "volume": 8333,
+      "volume_ma5": 4024,
+      "volume_ratio": 2.07,
+      "foreign_net": 1836,
       "trust_net": 0,
-      "lot_cost": 59300
+      "lot_cost": 42500
+    },
+    {
+      "code": "1528",
+      "name": "恩德",
+      "close": 28.2,
+      "change_pct": 9.94,
+      "ma20": 25.44,
+      "volume": 37693,
+      "volume_ma5": 16846,
+      "volume_ratio": 2.24,
+      "foreign_net": 8139,
+      "trust_net": 0,
+      "lot_cost": 28200
+    },
+    {
+      "code": "4545",
+      "name": "銘鈺",
+      "close": 38.2,
+      "change_pct": 9.93,
+      "ma20": 36.01,
+      "volume": 943,
+      "volume_ma5": 147,
+      "volume_ratio": 6.42,
+      "foreign_net": 88,
+      "trust_net": 0,
+      "lot_cost": 38200
+    },
+    {
+      "code": "3701",
+      "name": "大眾控",
+      "close": 63.2,
+      "change_pct": 9.91,
+      "ma20": 56.61,
+      "volume": 14788,
+      "volume_ma5": 6166,
+      "volume_ratio": 2.4,
+      "foreign_net": 244,
+      "trust_net": 0,
+      "lot_cost": 63200
+    },
+    {
+      "code": "9933",
+      "name": "中鼎",
+      "close": 51.5,
+      "change_pct": 7.52,
+      "ma20": 45.46,
+      "volume": 42675,
+      "volume_ma5": 7395,
+      "volume_ratio": 5.77,
+      "foreign_net": 17633,
+      "trust_net": 0,
+      "lot_cost": 51500
     }
   ]
 }
