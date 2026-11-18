@@ -1,31 +1,31 @@
 {
-  "last_updated": "2026-11-18 01:00:19",
+  "last_updated": "2026-11-19 00:39:03",
   "stocks": [
     {
-      "code": "4807",
-      "name": "日成-KY",
-      "close": 35.3,
-      "change_pct": 9.97,
-      "ma20": 30.52,
-      "volume": 1010,
-      "volume_ma5": 207,
-      "volume_ratio": 4.87,
-      "foreign_net": 93,
+      "code": "2923",
+      "name": "鼎固-KY",
+      "close": 31.6,
+      "change_pct": 9.91,
+      "ma20": 27.48,
+      "volume": 545,
+      "volume_ma5": 200,
+      "volume_ratio": 2.72,
+      "foreign_net": 54,
       "trust_net": 0,
-      "lot_cost": 35300
+      "lot_cost": 31600
     },
     {
-      "code": "6743",
-      "name": "安普新",
-      "close": 34.9,
-      "change_pct": 7.22,
-      "ma20": 30.56,
-      "volume": 3766,
-      "volume_ma5": 317,
-      "volume_ratio": 11.87,
-      "foreign_net": 227,
-      "trust_net": 3,
-      "lot_cost": 34900
+      "code": "9933",
+      "name": "中鼎",
+      "close": 56.6,
+      "change_pct": 9.9,
+      "ma20": 47.39,
+      "volume": 53217,
+      "volume_ma5": 16346,
+      "volume_ratio": 3.26,
+      "foreign_net": 11996,
+      "trust_net": -2245,
+      "lot_cost": 56600
     }
   ]
 }
