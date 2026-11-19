@@ -1,31 +1,31 @@
 {
-  "last_updated": "2026-11-19 00:39:03",
+  "last_updated": "2026-11-20 00:42:14",
   "stocks": [
     {
-      "code": "2923",
-      "name": "鼎固-KY",
-      "close": 31.6,
-      "change_pct": 9.91,
-      "ma20": 27.48,
-      "volume": 545,
-      "volume_ma5": 200,
-      "volume_ratio": 2.72,
-      "foreign_net": 54,
-      "trust_net": 0,
-      "lot_cost": 31600
+      "code": "3028",
+      "name": "增你強",
+      "close": 57.5,
+      "change_pct": 9.94,
+      "ma20": 56.96,
+      "volume": 3343,
+      "volume_ma5": 678,
+      "volume_ratio": 4.93,
+      "foreign_net": -3189,
+      "trust_net": 3072,
+      "lot_cost": 57500
     },
     {
-      "code": "9933",
-      "name": "中鼎",
-      "close": 56.6,
-      "change_pct": 9.9,
-      "ma20": 47.39,
-      "volume": 53217,
-      "volume_ma5": 16346,
-      "volume_ratio": 3.26,
-      "foreign_net": 11996,
-      "trust_net": -2245,
-      "lot_cost": 56600
+      "code": "2258",
+      "name": "鴻華先進-創",
+      "close": 29.95,
+      "change_pct": 7.16,
+      "ma20": 29.26,
+      "volume": 1064,
+      "volume_ma5": 462,
+      "volume_ratio": 2.3,
+      "foreign_net": 261,
+      "trust_net": 0,
+      "lot_cost": 29950
     }
   ]
 }
