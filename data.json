@@ -1,31 +1,18 @@
 {
-  "last_updated": "2026-11-20 00:42:14",
+  "last_updated": "2026-11-21 00:17:29",
   "stocks": [
     {
-      "code": "3028",
-      "name": "增你強",
-      "close": 57.5,
-      "change_pct": 9.94,
-      "ma20": 56.96,
-      "volume": 3343,
-      "volume_ma5": 678,
-      "volume_ratio": 4.93,
-      "foreign_net": -3189,
-      "trust_net": 3072,
-      "lot_cost": 57500
-    },
-    {
-      "code": "2258",
-      "name": "鴻華先進-創",
-      "close": 29.95,
-      "change_pct": 7.16,
-      "ma20": 29.26,
-      "volume": 1064,
-      "volume_ma5": 462,
-      "volume_ratio": 2.3,
-      "foreign_net": 261,
+      "code": "2468",
+      "name": "華經",
+      "close": 69.1,
+      "change_pct": 9.86,
+      "ma20": 62.08,
+      "volume": 72021,
+      "volume_ma5": 22426,
+      "volume_ratio": 3.21,
+      "foreign_net": 3334,
       "trust_net": 0,
-      "lot_cost": 29950
+      "lot_cost": 69100
     }
   ]
 }
