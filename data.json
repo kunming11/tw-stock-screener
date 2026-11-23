@@ -1,18 +1,4 @@
 {
-  "last_updated": "2026-11-21 00:17:29",
-  "stocks": [
-    {
-      "code": "2468",
-      "name": "華經",
-      "close": 69.1,
-      "change_pct": 9.86,
-      "ma20": 62.08,
-      "volume": 72021,
-      "volume_ma5": 22426,
-      "volume_ratio": 3.21,
-      "foreign_net": 3334,
-      "trust_net": 0,
-      "lot_cost": 69100
-    }
-  ]
+  "last_updated": "2026-11-24 03:24:43",
+  "stocks": []
 }
