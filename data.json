@@ -1,18 +1,4 @@
 {
-  "last_updated": "2026-11-25 03:00:56",
-  "stocks": [
-    {
-      "code": "7736",
-      "name": "虎山",
-      "close": 72.6,
-      "change_pct": 10.0,
-      "ma20": 68.3,
-      "volume": 498,
-      "volume_ma5": 34,
-      "volume_ratio": 14.55,
-      "foreign_net": 13,
-      "trust_net": 0,
-      "lot_cost": 72600
-    }
-  ]
+  "last_updated": "2026-11-26 02:05:53",
+  "stocks": []
 }
